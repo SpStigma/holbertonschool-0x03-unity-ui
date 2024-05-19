@@ -3095,6 +3095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 5
+  scoreText: {fileID: 300228381}
 --- !u!1001 &974256969
 Prefab:
   m_ObjectHideFlags: 0
