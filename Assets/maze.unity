@@ -3236,10 +3236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c966f74f336534696d14eba5da0a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   health: 5
   scoreText: {fileID: 300228381}
   healthText: {fileID: 1048543789}
+  winLoseText: {fileID: 153117152}
+  winLoseBg: {fileID: 1390378616}
 --- !u!1001 &974256969
 Prefab:
   m_ObjectHideFlags: 0

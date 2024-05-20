@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 	public int health = 5;
 	public Text scoreText;
 	public Text healthText;
+	public Text winLoseText;
+	public Image winLoseBg;
 
 	void Start()
 	{
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
 		if (other.CompareTag("Goal"))
 		{
-			Debug.Log("You win!");
+			SetWinLoseText();
 		}
 	}
 
@@ -69,5 +71,13 @@ public class PlayerController : MonoBehaviour
 	void SetHealthText()
 	{
 		healthText.text = "Health: " + health;
+	}
+	
+	void SetWinLoseText()
+	{
+		winLoseText.text = "You Win!";
+		winLoseText.color = Color.black;
+		winLoseBg.gameObject.SetActive(true);
+		winLoseBg.color = Color.green;
 	}
 }
