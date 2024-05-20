@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 		if (health == 0)
 		{
 			SetLoseText();
-			SceneManager.LoadScene("maze");
+			StartCoroutine(LoadScene(3));
 		}
 	}
 
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
 		if (other.CompareTag("Goal"))
 		{
 			SetWinLoseText();
+			StartCoroutine(LoadScene(3));
 		}
 	}
 
@@ -87,5 +88,11 @@ public class PlayerController : MonoBehaviour
 		winLoseText.color = Color.white;
 		winLoseBg.gameObject.SetActive(true);
 		winLoseBg.color = Color.red;
+	}
+
+	IEnumerator LoadScene(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		SceneManager.LoadScene("maze");
 	}
 }
